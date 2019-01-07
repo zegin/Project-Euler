@@ -10,15 +10,22 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 const problem4 = new Problem(4, description, () => {
   const isPalindromic = n => {
-    // console.log(...n.reverse())
+    const reversed = n.toString().split('').reverse('')
+    return n.toString().split('').every((char, i) => char === reversed[i])
   }
 
+  let result = 0
 
-  // for (let x = 100; x < 1000; x++) {
-  //   for (let y = 100; y < 1000; y++) {
+  for (let x = 100; x < 1000; x++) {
+    for (let y = 100; y < 1000; y++) {
+      let produit = x * y
+      if(isPalindromic(produit) && produit > result){
+        result = produit
+      }
+    }
+  }
 
-  //   }
-  // }
+  return result
 })
 
 module.exports = problem4
