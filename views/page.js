@@ -34,9 +34,9 @@ const Page = props => {
       <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js" />
       <script>hljs.initHighlightingOnLoad();</script>
       <body>
-        <h1>Project Euler</h1>
+        <div className="display-3 mb-3">Project Euler</div>
         <div className="container">
-          {list.map(el => <Problem {...el} />)}
+          {list.map(el => <Problem key={el.index} {...el} />)}
         </div>
       </body>
     </html>

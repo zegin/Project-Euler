@@ -6,11 +6,11 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 `
 
 const problem1 = new Problem(1, description, () => {
-  let b = 0
+  let sum = 0
   for (let a = 1; a < 1000; a++) {
-    b += (a % 3 == 0 || a % 5 == 0) ? a : 0
+    sum += (a % 3 === 0 || a % 5 === 0) ? a : 0
   }
-  return b
+  return sum
 })
 
 module.exports = problem1
