@@ -10,6 +10,7 @@ const problem2 = require('./problem2')
 const problem3 = require('./problem3')
 const problem4 = require('./problem4')
 const problem5 = require('./problem5')
+const problem6 = require('./problem6')
 
 const problems = [
   problem1,
@@ -17,6 +18,7 @@ const problems = [
   problem3,
   problem4,
   problem5,
+  problem6,
 ]
 
 app.set('views', `${__dirname}/views`)
