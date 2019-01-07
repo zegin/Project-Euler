@@ -6,8 +6,6 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 `
 
-/* eslint-disable */
-
 const problem4 = new Problem(4, description, () => {
   const isPalindromic = n => {
     const reversed = n.toString().split('').reverse('')
@@ -18,8 +16,8 @@ const problem4 = new Problem(4, description, () => {
 
   for (let x = 100; x < 1000; x++) {
     for (let y = 100; y < 1000; y++) {
-      let produit = x * y
-      if(isPalindromic(produit) && produit > result){
+      const produit = x * y
+      if (isPalindromic(produit) && produit > result) {
         result = produit
       }
     }
