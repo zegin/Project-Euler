@@ -16,7 +16,7 @@ const isPrime = n => {
   return true
 } 
 
-const problem3 = () => {
+module.exports = () => {
   
   const number = 600851475143
   
@@ -29,5 +29,3 @@ const problem3 = () => {
   
   return Math.max(...prime)
 }
-
-console.log(problem3())
