@@ -1,4 +1,4 @@
-const Problem = require('./problem')
+const Problem = require('./Problem')
 
 const description = `
 The sum of the squares of the first ten natural numbers is,

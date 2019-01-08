@@ -1,4 +1,4 @@
-const Problem = require('./problem')
+const Problem = require('./Problem')
 
 const description = `
 The prime factors of 13195 are 5, 7, 13 and 29.

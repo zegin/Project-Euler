@@ -1,3 +1,5 @@
+const glob = require('glob')
+const path = require('path')
 // content of index.js
 const express = require('express')
 
@@ -5,21 +7,11 @@ const app = express()
 
 const port = 3000
 
-const problem1 = require('./problem1')
-const problem2 = require('./problem2')
-const problem3 = require('./problem3')
-const problem4 = require('./problem4')
-const problem5 = require('./problem5')
-const problem6 = require('./problem6')
+const problems = []
 
-const problems = [
-  problem1,
-  problem2,
-  problem3,
-  problem4,
-  problem5,
-  problem6,
-]
+glob.sync('./problems/problem+([0-9]).js').forEach((file) => {
+  problems.push(require(path.resolve(file))) //eslint-disable-line
+})
 
 app.set('views', `${__dirname}/views`)
 app.set('view engine', 'js')
